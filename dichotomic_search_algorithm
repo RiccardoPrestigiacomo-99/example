@@ -1,15 +1,20 @@
+# define varisbles
 epsilon = 0.01
 l = 0.2
 a = -3
 b = 5
 k = 1
 
+#define our function
 def function(x):
     return x**2+2*x
-    
- x = []
+
+#list that we need to plot the interval
+x = []
 y = []
 
+
+#dichotomic search algorithm
 while  b-a > l:
     lambda_ = (a+b)/2-epsilon
     u_ = (a+b)/2+epsilon
