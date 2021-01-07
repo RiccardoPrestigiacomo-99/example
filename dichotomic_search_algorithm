@@ -1,0 +1,32 @@
+epsilon = 0.01
+l = 0.2
+a = -3
+b = 5
+k = 1
+
+def function(x):
+    return x**2+2*x
+    
+ x = []
+y = []
+
+while  b-a > l:
+    lambda_ = (a+b)/2-epsilon
+    u_ = (a+b)/2+epsilon
+    
+    function_in_lambda = function(lambda_)
+    function_in_u = function(u_)
+    if k==2:
+        print(function_in_lambda<function_in_u)
+        
+    if (function_in_lambda < function_in_u):
+        a = a
+        b = u_
+    else: 
+        a = lambda_
+        b = b
+        
+    x.append(a)
+    y.append(b)
+    k = k+1 
+    
